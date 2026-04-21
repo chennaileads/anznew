@@ -764,7 +764,31 @@
       transform: translateY(-3px);
       box-shadow: 0 15px 30px rgba(193, 154, 107, 0.3);
     }
+    .service-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo on top-right */
+.service-image::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
     </style>
+    
 </head>
 <body>
     <!-- wrapper -->

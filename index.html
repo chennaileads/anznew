@@ -709,6 +709,98 @@
             max-height: 80px;
             width: auto;
         }
+        .gallery-item .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item .image img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.gallery-item .image::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo on top-right corner */
+.gallery::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.service-image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image-box img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.service-image-box::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.img-style {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-style img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.img-style::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
 </style>
 </head>
 
@@ -795,12 +887,11 @@
                         <div class="content">
                             <div class="tf-container">
                                 <div class="content-inner text-center">
-                                    <h1 class=" title text_white text-uppercase mb_24 fade-item fade-item-1">Form Meets
+                                    <h1 class=" title text_white text-uppercase mb_24 fade-item fade-item-1">AnZ Home 
                                         <br class="md-hide">
-                                        Function
+                                        Furnishings
                                     </h1>
-                                    <p class="text_white desc mb_40 fade-item fade-item-2">Clean silhouettes and calm
-                                        tones for modern spaces.
+                                    <p class="text_white desc mb_40 fade-item fade-item-2">Decor To Adore
                                     </p>
                                     <a href="product.html"
                                         class="btn_link hover-underline-link text_white text-body-default fw-5 text-uppercase fade-item fade-item-3">
@@ -904,8 +995,8 @@
                     <div class="card-product">
                         <div class="card-product_wrapper">
                             <a href="product.html" class="product-img">
-                                <img class="img-product" src="images/img/sofa-1.png">
-                                <img class="img-hover" src="images/img/sofa-1.png">
+                                <img class="img-product" src="images/images/sofa-a.png">
+                                <img class="img-hover" src="images/images/sofa-a.png">
                             </a>
                         </div>
                         <div class="card-product_info">
@@ -958,7 +1049,32 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="swiper-slide">
+                    <div class="card-product">
+                        <div class="card-product_wrapper">
+                            <a href="product.html" class="product-img">
+                                <img class="img-product" src="images/images/mosquito-1.png">
+                                <img class="img-hover" src="images/images/mosquito-1.png">
+                            </a>
+                        </div>
+                        <div class="card-product_info">
+                            <a href="product.html" class="name-product link">Mosquito Nets</a>
+                        </div>
+                    </div>
+                </div>
+ <div class="swiper-slide">
+                    <div class="card-product">
+                        <div class="card-product_wrapper">
+                            <a href="product.html" class="product-img">
+                                <img class="img-product" src="images/images/carpets.png">
+                                <img class="img-hover" src="images/images/carpets.png">
+                            </a>
+                        </div>
+                        <div class="card-product_info">
+                            <a href="product.html" class="name-product link">Carpets</a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Mattress -->
                 <div class="swiper-slide">
                     <div class="card-product">
@@ -1000,80 +1116,7 @@
     </div>
 </section>
             <!-- /Product Main --><div class="services-wrapper">
-    <!-- <div class="container">
-         <div class="heading-section text-center mb_50 wow fadeInUp">
-        <h2 class="">Featured Services</h2>
-    </div>
-        <div class="services-grid">
-
-            <a href="product.html" class="service-category-card">
-                <div class="category-image">
-                    <img src="images/img/banner.jpg" alt="Window Treatments" 
-                         onerror="this.src='https://placehold.co/600x400/e8e0d8/c19a6b?text=Window+Treatments'">
-                </div>
-                <div class="category-content">
-                    <h3>Window Treatments</h3>
-                    <p>Elevate your interiors with refined light control & privacy solutions</p>
-                    <span class="view-products">View Products →</span>
-                </div>
-            </a>
-<a href="product.html" class="service-category-card">
-                <div class="category-image">
-                    <img src="images/img/sofa-2.jpg" alt="Furniture Customization" 
-                         onerror="this.src='https://placehold.co/600x400/e8e0d8/c19a6b?text=Furniture+Customization'">
-                </div>
-                <div class="category-content">
-                    <h3>Furniture Customization</h3>
-                    <p>Revive, restore, and personalize your beloved pieces</p>
-                    <span class="view-products">View Products →</span>
-                </div>
-            </a>
-
-            <a href="product.html" class="service-category-card">
-                <div class="category-image">
-                    <img src="images/img/wallpaper-1.png" alt="Furniture Customization" 
-                         onerror="this.src='https://placehold.co/600x400/e8e0d8/c19a6b?text=Furniture+Customization'">
-                </div>
-                <div class="category-content">
-                    <h3>Wall Décor & Finishes</h3>
-                    <p>Luxury wallpapers , customized wallpapers, Frosted Flims, Louvers.</p>
-                    <span class="view-products">View Products →</span>
-                </div>
-            </a> -->
-            <!-- Main Category 2 -->
-            <!-- <a href="product.html" class="service-category-card">
-                <div class="category-image">
-                    <img src="images/img/Mosquito Nets.jpg" alt="Comfort & Protection" 
-                         onerror="this.src='https://placehold.co/600x400/e8e0d8/c19a6b?text=Comfort+%26+Protection'">
-                </div>
-                <div class="category-content">
-                    <h3>Comfort & Protection</h3>
-                    <p>Restorative sleep & everyday luxury for your sanctuary</p>
-                    <span class="view-products">View Products →</span>
-                </div>
-            </a> -->
-
-            <!-- Main Category 3 -->
-            <!-- <a href="product.html" class="service-category-card">
-                <div class="category-image">
-                    <img src="images/img/Vinyl Flooring.jpg" alt="Flooring Solutions" 
-                         onerror="this.src='https://placehold.co/600x400/e8e0d8/c19a6b?text=Flooring+Solutions'">
-                </div>
-                <div class="category-content">
-                    <h3>Flooring Solutions</h3>
-                    <p>Foundations of style — durable, timeless, and elegant floor coverings</p>
-                    <span class="view-products">View Products →</span>
-                </div>
-            </a> -->
-
-            <!-- Main Category 4 -->
-            
-
-        <!-- </div>
-    </div>
-</div>
-</div> -->
-            <!-- s-colection -->
+   
 
 <section class="featured-services-premium">
     <div class="tf-container">
@@ -2151,7 +2194,7 @@
             </li>
             <li>
                 <i class="fas fa-phone-alt"></i>
-                <a href="tel:9710854799">++917358560491</a>
+                <a href="tel:9710854799">+917358560491</a>
             </li>
             <li>
                 <i class="fas fa-envelope"></i>

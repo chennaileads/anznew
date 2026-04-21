@@ -87,6 +87,24 @@
             max-height: 80px;
             width: auto;
         }
+
+        .img-style {
+    position: relative;
+    display: block;
+}
+
+.img-style::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -212,17 +230,23 @@
             <div class="tf-grid-layout lg-col-3 md-col-2">
 
                 <!-- Item 1 -->
-                <div class="blog-item hover-image">
-                    <a href="#" class="img-style mb_24">
-                        <img class="img-cover" loading="lazy"
-                            src="images/img/curtain-1.png" alt="Blackout Curtains">
+              <div class="blog-item hover-image">
+    <a href="#" class="img-style mb_24" style="position: relative; display: block;">
 
-                        <div class="wrap-tag d-flex gap_6">
-                            <div class="tag">#Blackout</div>
-                            <div class="tag">#Bedroom</div>
-                        </div>
-                    </a>
-                </div>
+        <img class="img-cover" loading="lazy"
+            src="images/img/curtain-1.png" alt="Blackout Curtains">
+
+        <!-- 🔥 LOGO TOP RIGHT -->
+        <img src="images/images/logo.png" alt="Logo"
+            style="position: absolute; top: 10px; right: 10px; width: 50px; height: auto; z-index: 10;">
+
+        <div class="wrap-tag d-flex gap_6">
+            <div class="tag">#Blackout</div>
+            <div class="tag">#Bedroom</div>
+        </div>
+
+    </a>
+</div>
 
                 <!-- Item 2 -->
                 <div class="blog-item hover-image">

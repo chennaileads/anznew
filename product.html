@@ -1922,7 +1922,77 @@
                 gap: 15px;
             }
         }
-      
+      .hero-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo on top-right of each slide */
+.hero-slide::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.product-image::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right on gallery images */
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}.gallery-overlay h5 {
+    color: #fff;
+}
     </style>
 </head>
 
