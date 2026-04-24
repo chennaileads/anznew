@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="css/sib-styles.css">
 
 
     <!-- Icon -->
@@ -107,9 +108,609 @@
 }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/></head>
+<style>
+    .service-image-box {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+    .swiper-slide {
+    line-height: 0;
+}
+ /* ===== SECTION LAYOUT ===== */
+.featured-services-premium {
+    padding: 60px 20px;
+}
 
-</head>
+/* Center container */
+.tf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* ===== SERVICE ROW ===== */
+.service-row {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== IMAGE BOX (MAIN CONTROL) ===== */
+.service-image-box {
+    width: 100%;              /* 👈 50% width */
+    max-width: 600px;        /* prevent too large */
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* ===== SWIPER ===== */
+.swiper {
+    width: 100%;
+    height:100%;           /* 👈 fixed height (clean look) */
+}
+
+/* ===== SLIDE IMAGE ===== */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;          /* 👈 removes bottom gap */
+    border-radius: 12px;
+}
+
+/* ===== PAGINATION STYLE ===== */
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e74a49;
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .service-image-box {
+        width: 70%;
+    }
+
+    .swiper {
+        height: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .service-image-box {
+        width: 100%;
+    }
+
+    .swiper {
+        height: 220px;
+    }
+}
+    .service-image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+      display: block;
+          padding: 0;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 50%;
+}
+
+.image-overlay-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #e74a49;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    z-index: 10;
+}
+    /* Premium Featured Services */
+    .featured-services-premium {
+        padding: 90px 0;
+        background: linear-gradient(180deg, #faf7f2 0%, #ffffff 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .featured-services-premium::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(193, 154, 107, 0.04) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    .featured-services-premium::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(193, 154, 107, 0.03) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    .section-header-premium {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .section-badge {
+        display: inline-block;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #c19a6b;
+        font-weight: 600;
+        margin-bottom: 18px;
+        padding: 8px 24px;
+        background: linear-gradient(135deg, rgba(193, 154, 107, 0.08) 0%, rgba(193, 154, 107, 0.02) 100%);
+        border-radius: 50px;
+        border: 1px solid rgba(193, 154, 107, 0.2);
+    }
+    
+    .section-header-premium h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        letter-spacing: -0.5px;
+    }
+    
+    .section-header-premium h2 span {
+        color: #c19a6b;
+        position: relative;
+    }
+    
+    .section-header-premium h2 span::after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: rgba(193, 154, 107, 0.12);
+        z-index: -1;
+    }
+    
+    .section-header-premium p {
+        font-size: 18px;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+    
+    /* Services Grid */
+    .services-premium-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Service Row - Alternating Layout */
+    .service-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(193, 154, 107, 0.08);
+    }
+    
+    .service-row:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(193, 154, 107, 0.1);
+        border-color: rgba(193, 154, 107, 0.2);
+    }
+    
+    .service-row.reverse {
+        direction: rtl;
+    }
+    
+    .service-row.reverse .service-content-box {
+        direction: ltr;
+    }
+    
+   
+    
+   
+    
+    .service-row:hover .service-image-box img {
+        transform: scale(1.08);
+    }
+    
+    .image-overlay-badge {
+        position: absolute; 
+        top: 30px;
+        left: 30px;
+        background: linear-gradient(135deg, #c19a6b 0%, #a0784c 100%);
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 0 8px 20px rgba(193, 154, 107, 0.3);
+        z-index: 2;
+    }
+    
+    .image-overlay-badge.right {
+        left: auto;
+        right: 30px;
+    }
+    
+    /* Content Box */
+    .service-content-box {
+        padding: 40px 45px 40px 20px;
+    }
+    
+    .service-row.reverse .service-content-box {
+        padding: 40px 20px 40px 45px;
+    }
+    
+    .service-icon-large {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #c19a6b 0%, #a0784c 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        box-shadow: 0 12px 25px rgba(193, 154, 107, 0.25);
+    }
+    
+    .service-icon-large i {
+        font-size: 32px;
+        color: #fff;
+    }
+    
+    .service-content-box h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    
+    .service-tagline-large {
+        font-size: 17px;
+        color: #c19a6b;
+        font-weight: 500;
+        margin-bottom: 25px;
+        letter-spacing: 0.3px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(193, 154, 107, 0.15);
+    }
+    
+    .service-description {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+    
+    .feature-list-premium {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
+    }
+    
+    .feature-list-premium li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 15px;
+        color: #444;
+        line-height: 1.5;
+    }
+    
+    .feature-list-premium li i {
+        color: #c19a6b;
+        font-size: 16px;
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+    
+    .service-cta-large {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 32px;
+        background: #1a1a1a;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+    }
+    
+    .service-cta-large i {
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+    
+    .service-cta-large:hover {
+        background: #c19a6b;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(193, 154, 107, 0.3);
+    }
+    
+    .service-cta-large:hover i {
+        transform: translateX(5px);
+    }
+    
+    .cta-text {
+        margin-top: 20px;
+        font-size: 15px;
+        color: #c19a6b;
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+    .cta-text i {
+        margin-right: 8px;
+    }
+    
+   
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .service-content-box {
+            padding: 30px 30px 30px 15px;
+        }
+        
+        .service-row.reverse .service-content-box {
+            padding: 30px 15px 30px 30px;
+        }
+        
+        .feature-list-premium {
+            grid-template-columns: 1fr;
+        }
+        
+        .why-grid-compact {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .section-header-premium h2 {
+            font-size: 36px;
+        }
+        
+        .service-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        
+        .service-row.reverse {
+            direction: ltr;
+        }
+        
+        .service-image-box {
+            min-height: 300px;
+            max-height: 350px;
+        }
+        
+        .service-content-box,
+        .service-row.reverse .service-content-box {
+            padding: 35px 30px;
+        }
+        
+        .service-content-box h3 {
+            font-size: 24px;
+        }
+        
+        .feature-list-premium {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .featured-services-premium {
+            padding: 60px 0;
+        }
+        
+        .section-header-premium h2 {
+            font-size: 30px;
+        }
+        
+        .section-header-premium p {
+            font-size: 16px;
+        }
+        
+        .service-image-box {
+            min-height: 250px;
+        }
+        
+        .service-content-box h3 {
+            font-size: 22px;
+        }
+        
+        .service-tagline-large {
+            font-size: 15px;
+        }
+        
+        .feature-list-premium {
+            grid-template-columns: 1fr;
+        }
+        
+        .why-grid-compact {
+            grid-template-columns: 1fr;
+        }
+        
+        .why-choose-compact {
+            padding: 35px 25px;
+        }
+        
+        .image-overlay-badge {
+            top: 20px;
+            left: 20px;
+            padding: 6px 16px;
+            font-size: 11px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .section-header-premium h2 {
+            font-size: 26px;
+        }
+        
+        .service-icon-large {
+            width: 55px;
+            height: 55px;
+        }
+        
+        .service-icon-large i {
+            font-size: 26px;
+        }
+        
+        .service-content-box h3 {
+            font-size: 20px;
+        }
+        
+        .service-cta-large {
+            padding: 12px 24px;
+            font-size: 13px;
+        }
+        
+        .why-choose-compact h3 {
+            font-size: 22px;
+        }
+    }
+      .site-logo img {
+            max-height: 80px;
+            width: auto;
+        }
+        .gallery-item .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item .image img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.gallery-item .image::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo on top-right corner */
+.gallery::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* Logo top-right corner */
+.service-image-box::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.img-style {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-style img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.img-style::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+</style>
 <body>
     <!-- wrapper -->
     <div id="wrapper">
@@ -192,12 +793,10 @@
 
         <!-- main-content -->
 <div class="main-content">
-
-    <!-- Curtain Blog / Showcase Section -->
+<!-- 
     <div class="s-blog-grid-s3 ">
         <div class="tf-container w-1548">
 
-            <!-- Featured Curtain Item -->
             <div class="blog-item style-list hover-image">
                 <a href="#" class="img-style">
                     <img class="img-cover" loading="lazy" decoding="async"
@@ -226,17 +825,17 @@
                 </div>
             </div>
 
-            <!-- Curtain Grid Items -->
+          
             <div class="tf-grid-layout lg-col-3 md-col-2">
 
-                <!-- Item 1 -->
+               
               <div class="blog-item hover-image">
     <a href="#" class="img-style mb_24" style="position: relative; display: block;">
 
         <img class="img-cover" loading="lazy"
             src="images/img/curtain-1.png" alt="Blackout Curtains">
 
-        <!-- 🔥 LOGO TOP RIGHT -->
+       
         <img src="images/images/logo.png" alt="Logo"
             style="position: absolute; top: 10px; right: 10px; width: 50px; height: auto; z-index: 10;">
 
@@ -248,7 +847,7 @@
     </a>
 </div>
 
-                <!-- Item 2 -->
+                
                 <div class="blog-item hover-image">
                     <a href="#" class="img-style mb_24">
                         <img class="img-cover" loading="lazy"
@@ -261,7 +860,7 @@
                     </a>
                 </div>
 
-                <!-- Item 3 -->
+            
                 <div class="blog-item hover-image">
                     <a href="#" class="img-style mb_24">
                         <img class="img-cover" loading="lazy"
@@ -274,7 +873,7 @@
                     </a>
                 </div>
 
-                <!-- Item 4 -->
+          
                 <div class="blog-item hover-image">
                     <a href="#" class="img-style mb_24">
                         <img class="img-cover" loading="lazy"
@@ -287,7 +886,6 @@
                     </a>
                 </div>
 
-                <!-- Item 5 -->
                 <div class="blog-item hover-image">
                     <a href="#" class="img-style mb_24">
                         <img class="img-cover" loading="lazy"
@@ -300,7 +898,6 @@
                     </a>
                 </div>
 
-                <!-- Item 6 -->
                 <div class="blog-item hover-image">
                     <a href="#" class="img-style mb_24">
                         <img class="img-cover" loading="lazy"
@@ -320,7 +917,7 @@
     <div class="s-blog-grid-s3 ">
     <div class="tf-container w-1548">
 
-        <!-- Featured Sofa Item -->
+    
         <div class="blog-item style-list hover-image">
             <a href="#" class="img-style">
                 <img class="img-cover" loading="lazy"
@@ -348,7 +945,7 @@
             </div>
         </div>
 
-        <!-- Sofa Grid -->
+   
         <div class="tf-grid-layout lg-col-3 md-col-2">
 
             <div class="blog-item hover-image">
@@ -418,7 +1015,7 @@
 <div class="s-blog-grid-s3 ">
     <div class="tf-container w-1548">
 
-        <!-- Featured Wallpaper -->
+       
         <div class="blog-item style-list hover-image">
             <a href="#" class="img-style">
                 <img class="img-cover" loading="lazy"
@@ -446,10 +1043,9 @@
             </div>
         </div>
 
-        <!-- Wallpaper Grid -->
         <div class="tf-grid-layout lg-col-3 md-col-2">
 
-            <!-- Item 1 -->
+     
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/wallpaper-1.jpg">
@@ -461,7 +1057,7 @@
                 </a>
             </div>
 
-            <!-- Item 2 -->
+         
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/wallpaper-2.jpg">
@@ -473,7 +1069,7 @@
                 </a>
             </div>
 
-            <!-- Item 3 -->
+          
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/wallpaper-3.jpg">
@@ -485,7 +1081,6 @@
                 </a>
             </div>
 
-            <!-- Item 4 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/wallpaper-4.jpg">
@@ -497,7 +1092,6 @@
                 </a>
             </div>
 
-            <!-- Item 5 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/flooring.jpg">
@@ -509,7 +1103,6 @@
                 </a>
             </div>
 
-            <!-- Item 6 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/flooring-1.jpg">
@@ -527,7 +1120,6 @@
 <div class="s-blog-grid-s3 ">
     <div class="tf-container w-1548">
 
-        <!-- Featured Interior -->
         <div class="blog-item style-list hover-image">
             <a href="#" class="img-style">
                 <img class="img-cover" loading="lazy"
@@ -555,10 +1147,8 @@
             </div>
         </div>
 
-        <!-- Interior Grid (5 items) -->
         <div class="tf-grid-layout lg-col-3 md-col-2">
 
-            <!-- Item 1 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/fashion-desinger-1.jpg">
@@ -570,7 +1160,6 @@
                 </a>
             </div>
 
-            <!-- Item 2 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/fashion-designer-2.jpg">
@@ -582,7 +1171,6 @@
                 </a>
             </div>
 
-            <!-- Item 3 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/fashion-designer-3.jpg">
@@ -594,7 +1182,6 @@
                 </a>
             </div>
 
-            <!-- Item 4 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/fashion-designer-4.jpg">
@@ -606,7 +1193,6 @@
                 </a>
             </div>
 
-            <!-- Item 5 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/fashion-desinger.jpg">
@@ -626,7 +1212,6 @@
 <div class="s-blog-grid-s3 ">
     <div class="tf-container w-1548">
 
-        <!-- Featured Blinds -->
         <div class="blog-item style-list hover-image">
             <a href="#" class="img-style">
                 <img class="img-cover" loading="lazy"
@@ -653,10 +1238,8 @@
             </div>
         </div>
 
-        <!-- Blinds Grid (6 items) -->
         <div class="tf-grid-layout lg-col-3 md-col-2">
 
-            <!-- Item 1 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-2.JPG">
@@ -667,7 +1250,6 @@
                 </a>
             </div>
 
-            <!-- Item 2 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-2a.jpg">
@@ -678,7 +1260,6 @@
                 </a>
             </div>
 
-            <!-- Item 3 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-3.jpg">
@@ -689,7 +1270,6 @@
                 </a>
             </div>
 
-            <!-- Item 4 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-4.jpg">
@@ -700,7 +1280,6 @@
                 </a>
             </div>
 
-            <!-- Item 5 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-5.jpg">
@@ -711,7 +1290,6 @@
                 </a>
             </div>
 
-            <!-- Item 6 -->
             <div class="blog-item hover-image">
                 <a href="#" class="img-style mb_24">
                     <img class="img-cover" src="images/images/blind-3a.jpg">
@@ -729,16 +1307,795 @@
 
 
 
+</div> -->
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <span class="section-badge">Recent Projects</span>
+            <h2>Hakkoido <span>Banglore</span></h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/hakoida/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/hakoida/5.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/hakoida/3.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/hakoida/7.jpg" onerror="this.src='https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/hakoida/8.jpg" onerror="this.src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'">
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
 </div>
+              <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Krisar International<span>  School</span></h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/krisar/1.heic" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/krisar/2.heic" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/krisar/3.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/krisar/4.heic" onerror="this.src='https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/krisar/5.heic" onerror="this.src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'">
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+                  <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Marina<span>  Mall</span></h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/marina/1.heic" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/marina/2.mp4" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/marina/3.mp4" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/marina/4.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/marina/5.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+               <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Myeongga Chennai<span>  Restaurant</span></h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/meyenga/1.heic" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/meyenga/2.heic" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/meyenga/3.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/meyenga/4.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/meyenga/5.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+               <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Salon</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/salon/1.heic" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/salon/2.heic" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/salon/3.mp4" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/salon/4.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/salon/5.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+                 <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Shop Project</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/shop/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/shop/2.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+           
+              <div class="swiper-slide">
+                <img src="images/shop/4.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/shop/5.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+               <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Sukkubhai Party Hall</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/sukkubhai/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/sukkubhai/2.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+           
+              <div class="swiper-slide">
+                <img src="images/sukkubhai/3.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/sukkubhai/4.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>  <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Suk Office</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/suk/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/suk/2.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+           
+              <div class="swiper-slide">
+                <img src="images/suk/4.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/suk/5.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+                <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Turf</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/turf/1.heic" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/turf/2.heic" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+           
+              <div class="swiper-slide">
+                <img src="images/turf/3.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              <div class="swiper-slide">
+                <img src="images/turf/4.heic" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+               <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
+<section class="featured-services-premium">
+    <div class="tf-container">
+        
+        <!-- Section Header -->
+        <div class="section-header-premium wow fadeInUp">
+            <!-- <span class="section-badge">Recent Projects</span> -->
+            <h2>Mosque</h2>
+            <!-- <p>Premium home furnishing solutions tailored to your unique style and needs — from concept to completion</p> -->
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-premium-grid">
+            
+            <!-- Service 1: Curtains & Window Solutions -->
+            <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-image-box">
+    <div class="swiper mySlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/mosque/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/mosque/2.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+            </div>
+
+           
+              <div class="swiper-slide">
+                <img src="images/mosque/3.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+            </div>
+              
+
+           
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <span class="image-overlay-badge">Most Popular</span> -->
+</div>
+              <div class="service-content-box">
+                    <div class="service-icon-large">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Curtains & Window Solutions</h3>
+                    <div class="service-tagline-large">Elegant Windows, Effortless Service</div>
+                    <p class="service-description">
+                        We offer a wide range of curtain collections with complete end-to-end service.
+                    </p>
+                    <ul class="feature-list-premium">
+                        <li><i class="fas fa-check-circle"></i> Extensive catalogs & fabric collections</li>
+                        <li><i class="fas fa-check-circle"></i> On-site measurement visit</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quotation provided</li>
+                        <li><i class="fas fa-check-circle"></i> Stitching + installation handled</li>
+                    </ul>
+                    <!-- <a href="product.html" class="service-cta-large">
+                        Explore Curtains <i class="fas fa-arrow-right"></i>
+                    </a> -->
+                    <!-- <div class="cta-text">
+                        <i class="fas fa-star"></i> All you need to do is choose. We take care of everything else.
+                    </div>
+                </div>  -->
+            </div>
+            
+         
+            
+        </div>
+        
+      
+    </div>
+</section>
 </div>
         <!-- /s-blog-grid-s1  -->
-
-
-
-
-        
-
-        <!-- s-customer-services  -->
+     <!-- s-customer-services  -->
         <div class="s-customer-services tf-spacing-2 sw-layout">
             <div class="tf-container w-1462 ">
                 <div class="swiper" data-screen-xl="4" data-preview="3" data-tablet="2" data-mobile-sm="2"
@@ -1000,9 +2357,20 @@
         <script src="js/main.js"></script>
 
         <!-- /Javascript -->
-
-</body>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script></body>
+<script>
+var swiper = new Swiper(".mySlider", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
+});
+</script>
 
 <!-- Mirrored from vinfur.vercel.app/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2026 12:21:05 GMT -->
 
